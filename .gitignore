@@ -1,0 +1,11 @@
+# Files and folder to ignore
+*.log
+*.swp
+package-lock.json
+
+node_modules/**/*
+
+
+# IDEs configuration folder
+.vscode/*
+.idea/*
