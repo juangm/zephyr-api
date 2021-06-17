@@ -1,0 +1,43 @@
+{
+  "name": "zephyr-api",
+  "version": "0.2.0",
+  "description": "Wrapper for Zephyr Scale Cloud API",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juangm/zephyr-api.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [
+    "zephyr",
+    "jira",
+    "smartbear",
+    "api"
+  ],
+  "author": "Juan Antonio Garcia Marin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juangm/zephyr-api/issues"
+  },
+  "homepage": "https://github.com/juangm/zephyr-api",
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "ts-node": "^10.0.0",
+    "tslint": "^6.1.3",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^4.3.3",
+    "vrsource-tslint-rules": "^6.0.0"
+  },
+  "dependencies": {
+    "got": "^11.8.2"
+  }
+}
