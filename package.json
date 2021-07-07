@@ -1,6 +1,6 @@
 {
   "name": "zephyr-api-wrapper",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Wrapper for Zephyr Scale Cloud API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
