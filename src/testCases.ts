@@ -56,4 +56,50 @@ export class TestCases extends BaseZephyrHelper {
     const data = await this.methodGET(`testcases/${key}/teststeps`);
     return data['body'];
   }
+
+  public async createTestCase(projectKey: string, name: string, opts = {}) {
+    const body = {
+      projectKey: projectKey,
+      name: name,
+      ...opts,
+    };
+    const data = await this.postJson('testcases', body);
+    return data['body'];
+  }
+
+  public async createIssueLink(key: string, issueId: string, type: string = 'COVERAGE') {
+    const data = await this.postJson(`testcases/${key}/links/issues`, { issueId: issueId, type: type });
+    return data['body'];
+  }
+
+  public async createWebLink(key: string, url: string, description: string, type: string = 'COVERAGE') {
+    const data = await this.postJson(`testcases/${key}/links/weblinks`, {
+      url: url,
+      description: description,
+      type: type,
+    });
+    return data['body'];
+  }
+
+  public async createTestScript(key: string, text: string, type: string = 'plain') {
+    if (!['plain', 'bdd', 'steps'].includes(type)) {
+      throw `Type should be 'plain', 'bdd' or 'steps'`;
+    }
+    const data = await this.postJson(`testcases/${key}/links/testscript`, {
+      text: text,
+      type: type,
+    });
+    return data['body'];
+  }
+
+  public async createTestSteps(key: string, steps: any[], mode: string = 'APPEND') {
+    if (!['APPEND', 'OVERWRITE'].includes(mode)) {
+      throw `Type should be 'plain', 'bdd' or 'steps'`;
+    }
+    const data = await this.postJson(`testcases/${key}/links/teststeps`, {
+      mode: mode,
+      steps: steps,
+    });
+    return data['body'];
+  }
 }

@@ -26,12 +26,26 @@ API specification can be found in -> [zephyr-spec](https://support.smartbear.com
 
 **_NOTE: Remember to set the environment variable ZEPHYR_TOKEN_**
 
+To use a subset of calls for a specific endpoint:
+
 ```javascript
 import { TestCycle } from 'zephyr-api-wrapper';
 
 const api = new TestCycle();
 
 api.getTestCycles().then((result) => {
+  console.log(result);
+});
+```
+
+To use all the possible calls for:
+
+```javascript
+import { FullZephyrAPI } from 'zephyr-api-wrapper';
+
+const api = new FullZephyrAPI();
+
+api.testCycles.getTestCycles().then((result) => {
   console.log(result);
 });
 ```
