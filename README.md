@@ -19,8 +19,10 @@ API specification can be found in -> [zephyr-spec](https://support.smartbear.com
 ### Endpoints implemented
 
 - :white_check_mark: Automations
+- :white_check_mark: TestCases
+- :white_check_mark: Folders
+- :white_check_mark: Statuses
 - :warning: TestCycles - partially done
-- :warning: TestCases - partially done
 - :warning: TestExecution - partially done
 
 ### Example (using Typescript)
