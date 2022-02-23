@@ -18,7 +18,7 @@ API specification can be found in -> [zephyr-spec](https://support.smartbear.com
 
 ### Endpoints implemented
 
-- :warning: Automation - partially done
+- :white_check_mark: Automations
 - :warning: TestCycles - partially done
 - :warning: TestCases - partially done
 - :warning: TestExecution - partially done

@@ -14,4 +14,9 @@ export class AutomationResults extends BaseZephyrHelper {
     const data = await this.postFileParams('automations/executions/junit', { projectKey: projectId }, junitFile);
     return data;
   }
+
+  public async publishCustomFormat(projectId: string, customFile: string) {
+    const data = await this.postFileParams('automations/executions/junit', { projectKey: projectId }, customFile);
+    return data;
+  }
 }
