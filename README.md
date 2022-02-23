@@ -1,6 +1,7 @@
 # Zephyr-api Library
 
-:warning: Work In Progress... (WIP)
+[![npm version](https://badge.fury.io/js/zephyr-api-wrapper.svg)](https://badge.fury.io/js/zephyr-api-wrapper)
+[![Known Vulnerabilities](https://snyk.io/test/github/juangm/zephyr-api/badge.svg)](https://snyk.io/test/github/juangm/zephyr-api)
 
 ## Overview
 
